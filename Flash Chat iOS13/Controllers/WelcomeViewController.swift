@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: CLTypingLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        titleLabel.text = "👤RithChat💚"
     }
     @IBAction func registerButton(_ sender: UIButton) {
         performSegue(withIdentifier: "goToRegisterView", sender: self)

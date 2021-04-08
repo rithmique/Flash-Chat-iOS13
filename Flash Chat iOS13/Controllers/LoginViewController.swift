@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         guard  let password = passwordTextfield.text else { return }
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let e = error {
-                print(e)
+                print(e.localizedDescription)
             } else {
                 self.performSegue(withIdentifier: K.toChatSegue, sender: self)
             }
